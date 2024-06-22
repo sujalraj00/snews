@@ -22,6 +22,16 @@ class AppString {
   static const privacyPolicyTermsCondition = "By signing in, you agree to our";
   static const privacyPolicy = "Privacy Policy";
   static const termsCondition = "Terms of Services";
-
   static String continueWithEmail = "Continue with email";
+
+  // login
+  static String login  = "Login";
+  static const followSimple = "Follow the simple steps";
+
+  static const email = "Email Address";
+  static const emailHint = "username@gmail.com";
+  static const password = "Password";
+  static const passwordHint = "*********";
+
+  static String signUp =  "SignUp";
 }

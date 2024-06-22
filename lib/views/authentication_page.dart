@@ -27,16 +27,17 @@ class AuthenticationPage extends GetView<AuthenticationController> {
             Text(AppString.welcome, style: AppStyles().semibold(),),
             10.heightBox,
             Text(AppString.signInToContinue, style: AppStyles().regular(
-              color: AppColor.secondaryText
+                color: AppColor.secondaryText
             ),),
             const Spacer(),
             VxBox(
-                    child: Text(
-              AppString.signInGoogle,
-              style: AppStyles().regular(color: AppColor.white),
-            ))
+                child: Text(
+                  AppString.signInGoogle,
+                  style: AppStyles().regular(color: AppColor.white),
+                ))
                 .width(context.screenWidth - 25)
-                .padding(const EdgeInsets.symmetric(horizontal: 16, vertical: 16))
+                .padding(
+                const EdgeInsets.symmetric(horizontal: 16, vertical: 16))
                 .rounded
                 .alignment(Alignment.center)
                 .color(AppColor.google)
@@ -49,25 +50,36 @@ class AuthenticationPage extends GetView<AuthenticationController> {
                   style: AppStyles().regular(color: AppColor.white),
                 ))
                 .width(context.screenWidth - 25)
-                .padding(const EdgeInsets.symmetric(horizontal: 16, vertical: 16))
+                .padding(
+                const EdgeInsets.symmetric(horizontal: 16, vertical: 16))
                 .rounded
                 .alignment(Alignment.center)
-                .color(AppColor.fb )
+                .color(AppColor.fb)
                 .make(),
             const Spacer(),
-            Text(AppString.dontHaveAccount, style: AppStyles().regular(),),
-            TextButton(onPressed: (){}, child: Text(AppString.continueWithEmail,style: AppStyles().regular(size: 14),)),
+
+            TextButton(onPressed: () {
+              controller.navigateToLogin();
+            },
+                child: Text(AppString.continueWithEmail,
+                  style: AppStyles().regular(size: 14),)),
             10.heightBox,
-            Text(AppString.privacyPolicyTermsCondition, style: AppStyles().regular(
-              color: AppColor.secondaryText,
-              size: 12
+            Text(
+              AppString.privacyPolicyTermsCondition, style: AppStyles().regular(
+                color: AppColor.secondaryText,
+                size: 12
             ),),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextButton(onPressed: (){}, child: Text(AppString.privacyPolicy, style: AppStyles().regular(size: 12),)),
-                Text("and", style: AppStyles().regular(size: 12, color: AppColor.secondaryText),),
-                TextButton(onPressed: (){}, child: Text(AppString.termsCondition, style: AppStyles().regular(size: 12)))
+                TextButton(onPressed: () {},
+                    child: Text(AppString.privacyPolicy,
+                      style: AppStyles().regular(size: 12),)),
+                Text("and", style: AppStyles().regular(
+                    size: 12, color: AppColor.secondaryText),),
+                TextButton(onPressed: () {},
+                    child: Text(AppString.termsCondition,
+                        style: AppStyles().regular(size: 12)))
               ],
             )
           ],
